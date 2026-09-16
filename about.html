@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Saiful Islam</title>
+  <meta name="description" content="About Saiful Islam — Freelance Graphic Designer creating bold visual identities, digital experiences and creative technology." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* V68 — Dennis-inspired About page: same editorial structure and motion language, rebuilt for Saiful Islam. */
+    body.about-page{background:#fff;color:#17181b;overflow-x:hidden}
+    .about-page .nav{color:#17181b;opacity:1;visibility:visible;pointer-events:none;background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none}
+    .about-page .nav > *{pointer-events:auto}
+    .about-page .nav .brand,.about-page .nav .nav-link,.about-page .nav .menu{color:#17181b}
+    .about-page .nav .nav-link:after,.about-page .nav .brand:after{background:#17181b}
+    .about-page .menu i,.about-page .menu i:after{background:#17181b}
+    .about-page .scroll-nav-trigger{background:#17181b;color:#fff}
+    .dennis-inspired-about{background:#fff}
+    .about-container{width:min(100% - 13.5vw,1200px);margin:0 auto}
+    .about-container-medium{width:min(100% - 24vw,1000px)}
+
+    .about-header-ref{min-height:72vh;padding:150px 0 60px;display:flex;align-items:center;background:#fff}
+    .about-ref-title{font:400 clamp(4.5rem,8vw,7.8rem)/.94 "Manrope",sans-serif;letter-spacing:-.075em;margin:0;max-width:980px;overflow:hidden}
+    .about-ref-title span{display:block;transform:translateY(110%);opacity:0;animation:aboutTitleIn 1.15s cubic-bezier(.16,1,.3,1) forwards}
+    .about-ref-title span:nth-child(2){animation-delay:.08s}
+    @keyframes aboutTitleIn{to{transform:translateY(0);opacity:1}}
+
+    .about-line-globe{padding:0 0 15px;background:#fff}
+    .about-stripe{height:1px;background:#dcdcdc;width:100%}
+    .about-digital-ball{width:92px;height:92px;border-radius:50%;background:#485fe9;display:flex;align-items:center;justify-content:center;color:#fff;position:relative;float:right;margin-top:-46px;z-index:4;transition:transform .7s cubic-bezier(.16,1,.3,1)}
+    .about-digital-ball:hover{transform:scale(1.07) rotate(4deg)}
+    .globe-ref{position:relative;width:36px;height:36px;border:1.4px solid currentColor;border-radius:50%;display:block;animation:globeSpin 7s linear infinite}
+    .globe-ref i{position:absolute;inset:2px 10px;border:1px solid currentColor;border-radius:50%}
+    .globe-ref i:nth-child(2){inset:2px 5px}
+    .globe-ref i:nth-child(3){inset:10px 2px}
+    .globe-ref b{position:absolute;left:2px;right:2px;top:17px;height:1px;background:currentColor;display:block}
+    .globe-ref b:last-child{transform:rotate(90deg)}
+    @keyframes globeSpin{to{transform:rotate(360deg)}}
+
+    .about-image-ref{position:relative;padding:88px 0 160px;background:#fff}
+    .about-bottom-lightgray{position:absolute;left:0;right:0;bottom:0;height:42px;background:#ededed}
+    .about-image-grid{display:grid;grid-template-columns:1fr 2.05fr;gap:6vw;align-items:start}
+    .about-image-copy{display:grid;grid-template-columns:25px 1fr;gap:22px;padding-top:8px;font:400 12px/1.55 "DM Sans",sans-serif;max-width:300px}
+    .about-image-copy p{margin:0 0 20px}
+    .about-ref-arrow{font-size:17px;line-height:1;transform:rotate(-43deg);display:block;will-change:transform}
+    .about-muted{color:#999;opacity:.72}
+    .animate-dot{display:inline-block;animation:dotPulse 1.2s infinite ease-in-out}.animate-dot:nth-child(2){animation-delay:.16s}.animate-dot:nth-child(3){animation-delay:.32s}
+    @keyframes dotPulse{0%,70%,100%{opacity:.3}35%{opacity:1}}
+    .single-about-image-ref{position:relative;overflow:hidden;background:#eee;aspect-ratio:1.04;transform:translateZ(0);isolation:isolate}
+    .single-about-image-ref img{position:absolute;left:0;top:-20%;width:100%;height:125%;object-fit:cover;object-position:center center;display:block;will-change:transform;transform:translate3d(0,0,0) scale(1.02);transition:filter .8s ease,transform .12s linear}
+    .single-about-image-ref:hover img{filter:saturate(1.08)}
+    .single-about-image-ref::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(23,24,27,.08),transparent 50%);z-index:1;pointer-events:none}
+    .about-image-overlay{position:absolute;inset:0;background:#ededed;z-index:3;transform:translateY(0);animation:aboutImageReveal 1.35s cubic-bezier(.76,0,.24,1) .45s forwards;will-change:transform}
+    @keyframes aboutImageReveal{to{transform:translateY(-101%)}}
+
+    .about-services-ref{padding:150px 0 170px;background:#fff}
+    .about-services-heading{border-top:1px solid #dcdcdc;padding-top:24px;margin-bottom:90px}
+    .about-services-heading h2{font:400 clamp(3.8rem,7vw,7rem)/.92 "Manrope";letter-spacing:-.07em;margin:0}
+    .about-services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:5vw}
+    .about-service{min-height:280px}
+    .service-num{font:400 12px/1 "DM Sans";margin-bottom:17px;color:#777}
+    .about-service h3{font:500 clamp(1.8rem,2.8vw,3rem)/1 "Manrope";letter-spacing:-.06em;margin:25px 0 18px}
+    .about-service p{font:400 13px/1.5 "DM Sans";max-width:310px;color:#505156;margin:0}
+
+    .about-feature-ref{padding:30px 0 180px;background:#fff}
+    .about-feature-grid{display:grid;grid-template-columns:1.45fr 1fr;gap:8vw;align-items:center}
+    .about-feature-image{position:relative;aspect-ratio:1.15;overflow:hidden;background:linear-gradient(135deg,#e9e9e9,#cfcfcf);transform:translateZ(0)}
+    .feature-image-fill{position:absolute;left:0;top:-12%;width:100%;height:124%;object-fit:cover;display:block;will-change:transform;transform:translate3d(0,0,0) scale(1.02)}
+    .about-feature-copy h2{font:400 clamp(3rem,5vw,5.5rem)/.9 "Manrope";letter-spacing:-.075em;margin:25px 0 30px}
+    .about-feature-copy p{font:400 14px/1.55 "DM Sans";max-width:390px;color:#505156}
+    .about-feature-mark{font-size:28px}
+
+    .about-footer-cta-ref{background:#1b1c20;color:#fff;padding:120px 0 80px;border-radius:0}
+    .about-footer-cta-ref .about-stripe{background:rgba(255,255,255,.22)}
+    .about-cta-arrow{font-size:20px;margin-bottom:35px}
+    .about-footer-cta-ref h2{font:400 clamp(5rem,11vw,11rem)/.82 "Manrope";letter-spacing:-.095em;margin:0 0 90px}
+    .about-footer-cta-ref h2 span{display:block}
+    .about-cta-row{position:relative;min-height:180px}
+    .about-round-cta{position:absolute;right:8%;top:-50px;width:180px;height:180px;border-radius:50%;background:#485fe9;color:#fff;display:flex;align-items:center;justify-content:center;font:500 15px "Manrope";transition:transform .8s cubic-bezier(.16,1,.3,1)}
+    .about-round-cta:hover{transform:scale(1.08) rotate(4deg)}
+    .about-contact-links{display:flex;flex-wrap:wrap;gap:28px;margin-top:55px;font:400 12px "DM Sans"}
+    .about-contact-links a{color:#fff;opacity:.72;transition:opacity .3s ease}.about-contact-links a:hover{opacity:1}
+    .about-footer-ref{background:#1b1c20;color:#fff;padding:0 0 28px}
+    .about-footer-inner-ref{border-top:1px solid rgba(255,255,255,.18);padding-top:20px;display:flex;justify-content:space-between;gap:30px;font:400 11px/1.4 "DM Sans";color:rgba(255,255,255,.55)}
+    .about-footer-inner-ref strong{color:#fff;font-weight:500;display:block}.about-footer-inner-ref span{display:block}
+
+    .about-page .reveal-up{opacity:0;transform:translateY(55px);transition:opacity 1s ease,transform 1.15s cubic-bezier(.16,1,.3,1)}
+    .about-page .reveal-up.visible{opacity:1;transform:none}
+
+    @media(max-width:800px){
+      .about-page .nav{height:72px}
+      .about-container,.about-container-medium{width:calc(100% - 44px)}
+      .about-header-ref{min-height:68vh;padding:120px 0 50px}
+      .about-ref-title{font-size:clamp(3.5rem,14vw,6rem);line-height:.92}
+      .about-digital-ball{width:82px;height:82px;margin-top:-41px}
+      .about-image-ref{padding:70px 0 110px}
+      .about-image-grid{grid-template-columns:1fr;gap:42px}
+      .about-image-copy{grid-template-columns:24px 1fr;max-width:230px}
+      .single-about-image-ref{aspect-ratio:.78}
+      .single-about-image-ref img{top:-18%;height:120%}
+      .about-services-ref{padding:95px 0 110px}
+      .about-services-heading{margin-bottom:60px}.about-services-heading h2{font-size:clamp(3.3rem,13vw,6rem)}
+      .about-services-grid{grid-template-columns:1fr;gap:70px}
+      .about-service{min-height:0}.about-service p{max-width:100%}
+      .about-feature-ref{padding:0 0 110px}.about-feature-grid{grid-template-columns:1fr;gap:55px}.about-feature-copy h2{font-size:clamp(3rem,12vw,6rem)}
+      .about-footer-cta-ref{padding:85px 0 55px}.about-footer-cta-ref h2{font-size:clamp(4.2rem,18vw,8rem);margin-bottom:70px}.about-round-cta{width:145px;height:145px;right:2%;top:-35px}
+      .about-footer-inner-ref{display:grid;grid-template-columns:1fr 1fr}.about-footer-inner-ref>div:last-child{text-align:right}
+    }
+    @media(max-width:430px){.about-ref-title{font-size:clamp(3.2rem,14vw,5.2rem)}.about-digital-ball{width:78px;height:78px}.about-round-cta{width:125px;height:125px;font-size:13px}}
+  </style>
+</head>
+<body class="about-page">
+  <div class="page-transition page-transition-in" aria-hidden="true">
+    <div class="page-transition-shape"></div>
+    <div class="page-transition-label"><span>ABOUT</span><small>SAIFUL ISLAM</small></div>
+  </div>
+
+  <header class="nav nav-visible" aria-label="Primary navigation">
+    <a class="brand magnetic" href="index.html" data-cursor="view" aria-label="Saiful Islam — Homepage"><span class="brand-copy">@saiful islam</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html" class="nav-link magnetic" data-cursor="view"><span class="nav-link-text">Home</span></a>
+      <a href="about.html" class="nav-link magnetic is-active" data-cursor="view"><span class="nav-link-text">About</span></a>
+      <a href="work.html" class="nav-link magnetic" data-cursor="view"><span class="nav-link-text">Work</span></a>
+      <a href="contact.html" class="nav-link magnetic" data-cursor="view"><span class="nav-link-text">Contact</span></a>
+    </nav>
+    <button class="menu magnetic" aria-label="Open menu" aria-expanded="false" data-cursor="view"><span>Menu</span><i></i></button>
+  </header>
+
+  <div class="menu-overlay" aria-hidden="true">
+    <div class="menu-overlay-inner">
+      <div class="menu-overlay-top"><span>Navigation</span><span>Saiful Islam</span></div>
+      <nav class="menu-nav" aria-label="Menu">
+        <a href="index.html" data-menu-link><small>01</small><span>Home</span></a>
+        <a href="about.html" data-menu-link><small>02</small><span>About</span></a>
+        <a href="work.html" data-menu-link><small>03</small><span>Work</span></a>
+        <a href="contact.html" data-menu-link><small>04</small><span>Contact</span></a>
+      </nav>
+      <div class="menu-overlay-bottom"><span>Freelance Graphic Designer</span><span>© 2026</span></div>
+    </div>
+  </div>
+
+  <button class="scroll-nav-trigger magnetic" type="button" aria-label="Open navigation" aria-expanded="false" data-cursor="view"><span></span><span></span></button>
+  <div class="scroll-menu" aria-hidden="true">
+    <div class="scroll-menu-backdrop"></div>
+    <aside class="scroll-menu-panel">
+      <div class="scroll-menu-inner">
+        <div class="scroll-menu-heading">Navigation</div>
+        <nav class="scroll-menu-nav" aria-label="Quick navigation">
+          <a href="index.html" data-scroll-nav-link><i></i><span>Home</span></a>
+          <a href="about.html" data-scroll-nav-link class="is-current"><i></i><span>About</span></a>
+          <a href="work.html" data-scroll-nav-link><i></i><span>Work</span></a>
+          <a href="contact.html" data-scroll-nav-link><i></i><span>Contact</span></a>
+        </nav>
+        <div class="scroll-menu-socials"><div><a href="#">Instagram</a><a href="#">Behance</a><a href="#">LinkedIn</a></div></div>
+      </div>
+    </aside>
+  </div>
+
+  <main class="dennis-inspired-about">
+    <section class="about-header-ref" id="top">
+      <div class="about-container about-container-medium">
+        <h1 class="about-ref-title"><span>Helping brands thrive </span><span>in the digital world</span></h1>
+      </div>
+    </section>
+
+    <section class="about-line-globe">
+      <div class="about-container about-container-medium">
+        <div class="about-stripe"></div>
+        <a class="about-digital-ball magnetic" href="contact.html" aria-label="Work with Saiful Islam" data-cursor="view">
+          <span class="globe-ref" aria-hidden="true">
+            <i></i><i></i><i></i><b></b><b></b>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <section class="about-image-ref">
+      <div class="about-bottom-lightgray"></div>
+      <div class="about-container">
+        <div class="about-image-grid">
+          <div class="about-image-copy">
+            <span class="about-ref-arrow" aria-hidden="true">↘</span>
+            <div>
+              <p data-about-speed="-0.7">I help brands turn ideas into clear, memorable visual experiences. From identity and campaign design to digital products, I push every project toward a stronger visual direction.</p>
+              <p class="about-muted" data-about-speed="-0.45">Always exploring<span class="animate-dot">.</span><span class="animate-dot">.</span><span class="animate-dot">.</span></p>
+            </div>
+          </div>
+          <div class="single-about-image-ref" data-about-image>
+            <div class="about-image-overlay"></div>
+            <img src="assets/about-image-1.jpg" alt="Saiful Islam — Freelance Graphic Designer" data-about-speed="-1.25">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-services-ref">
+      <div class="about-container">
+        <div class="about-services-heading">
+          <h2>I can help you with<span class="animate-dot">.</span><span class="animate-dot">.</span><span class="animate-dot">.</span></h2>
+        </div>
+        <div class="about-services-grid">
+          <article class="about-service reveal-up">
+            <div class="service-num">01</div><div class="about-stripe"></div>
+            <h3>Graphic Design</h3>
+            <p>Visual identities, campaign graphics, social media design, print and brand systems built with a clear visual point of view.</p>
+          </article>
+          <article class="about-service reveal-up">
+            <div class="service-num">02</div><div class="about-stripe"></div>
+            <h3>Digital Design</h3>
+            <p>Web experiences, interfaces and visual systems designed for modern brands, with attention to movement, hierarchy and interaction.</p>
+          </article>
+          <article class="about-service reveal-up">
+            <div class="service-num">03</div><div class="about-stripe"></div>
+            <h3>AI &amp; Creative Tech</h3>
+            <p>AI-assisted creative workflows and practical digital tools that make production faster while keeping the creative direction intentional.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-feature-ref">
+      <div class="about-container about-container-medium">
+        <div class="about-feature-grid">
+          <div class="about-feature-image" data-about-image>
+            <div class="about-image-overlay"></div>
+            <img class="feature-image-fill" src="assets/about-image-2.jpg" alt="Saiful Islam — creative work" loading="lazy">
+          </div>
+          <div class="about-feature-copy reveal-up">
+            <div class="about-feature-mark">✦</div>
+            <h2>Design with purpose.<br>Move with intention.</h2>
+            <p>I work where design, technology and curiosity meet. My software engineering background helps me understand not only how something looks, but how it behaves, moves and works as a complete experience.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-footer" id="contact">
+      <div class="contact-footer-inner">
+        <div class="contact-heading-row">
+          <div class="contact-arrow reveal">↙</div>
+          <h2 class="contact-heading reveal-up">
+            <span><span class="contact-avatar"><img src="assets/footer-profile.jpg" alt="Saiful Islam" loading="lazy"></span> Let's work</span>
+            <span>together</span>
+          </h2>
+        </div>
+
+        <div class="contact-action-row">
+          <div class="contact-action-col">
+            <div class="contact-rule"></div>
+            <a class="contact-circle magnetic" href="mailto:creative.saifulxp@gmail.com" data-cursor="view" aria-label="Get in touch with Saiful Islam">
+              <span>Get in touch</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-details-row">
+          <div class="contact-pills">
+            <a class="contact-pill magnetic" href="mailto:creative.saifulxp@gmail.com" data-cursor="view">creative.saifulxp@gmail.com</a>
+            <a class="contact-pill magnetic" href="tel:+8801784408797" data-cursor="view">+8801784408797</a><a class="contact-pill magnetic" href="https://wa.me/8801784408797" target="_blank" rel="noopener" data-cursor="view">WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="contact-bottom">
+          <div class="contact-meta-group">
+            <div class="contact-meta">
+              <h5>Version</h5>
+              <p>2026 © Saiful Islam</p>
+            </div>
+            <div class="contact-meta">
+              <h5>Local time</h5>
+              <p><span id="footerTime">--:-- -- GMT+6</span></p>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <h5>Socials</h5>
+            <div class="contact-social-links">
+              <a href="#" class="magnetic">Instagram</a>
+              <a href="#" class="magnetic">Behance</a>
+              <a href="#" class="magnetic">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  <div class="cursor-dot" aria-hidden="true"></div><div class="cursor-ring" aria-hidden="true"></div>
+  <script src="script.js"></script>
+  <script>
+    (() => {
+      const transition = document.querySelector('.page-transition');
+      if (!transition) return;
+      window.addEventListener('load', () => {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { transition.remove(); return; }
+        requestAnimationFrame(() => transition.classList.add('is-ready'));
+        setTimeout(() => {
+          transition.classList.remove('page-transition-in', 'is-ready', 'is-active');
+          document.body.classList.remove('page-transitioning');
+        }, 1150);
+      }, {once:true});
+
+      document.querySelectorAll('a[href="index.html"], a[href="index.html#selected-work"], a[href="contact.html"]').forEach(link => {
+        link.addEventListener('click', (event) => {
+          if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+          const href = link.getAttribute('href');
+          if (!href) return;
+          event.preventDefault();
+          transition.classList.remove('page-transition-in', 'is-ready');
+          // Returning Home should keep the cinematic circle but never show the ABOUT label.
+          if (href === 'index.html' || href === 'index.html#selected-work') {
+            transition.classList.add('page-transition-no-label');
+          } else {
+            transition.classList.remove('page-transition-no-label');
+          }
+          transition.classList.add('is-active');
+          document.body.classList.add('page-transitioning');
+          setTimeout(() => { window.location.href = href; }, 1050);
+        });
+      });
+    })();
+  </script>
+  <script>
+    (() => {
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const speedEls = document.querySelectorAll('[data-about-speed]');
+      const images = document.querySelectorAll('[data-about-image]');
+      const mainImage = document.querySelector('.single-about-image-ref');
+      const arrow = document.querySelector('.about-ref-arrow');
+      if (reduce) return;
+
+      let targetScroll = window.scrollY || 0;
+      let currentScroll = targetScroll;
+      let raf = 0;
+      let mouseX = 0, mouseY = 0, smoothX = 0, smoothY = 0;
+
+      window.addEventListener('scroll', () => { targetScroll = window.scrollY || 0; }, {passive:true});
+      window.addEventListener('mousemove', e => {
+        mouseX = (e.clientX / Math.max(window.innerWidth,1) - .5) * 2;
+        mouseY = (e.clientY / Math.max(window.innerHeight,1) - .5) * 2;
+      }, {passive:true});
+
+      const tick = () => {
+        currentScroll += (targetScroll - currentScroll) * .085;
+        smoothX += (mouseX - smoothX) * .045;
+        smoothY += (mouseY - smoothY) * .045;
+        const vh = window.innerHeight || 1;
+
+        speedEls.forEach(el => {
+          const r = el.getBoundingClientRect();
+          if (r.bottom < -150 || r.top > vh + 150) return;
+          const speed = parseFloat(el.dataset.aboutSpeed || '0');
+          const progress = (r.top + r.height / 2 - vh / 2) / vh;
+          el.style.transform = `translate3d(0, ${progress * speed * 70}px, 0)`;
+        });
+
+        images.forEach(box => {
+          const r = box.getBoundingClientRect();
+          if (r.bottom < -180 || r.top > vh + 180) return;
+          const progress = (r.top + r.height / 2 - vh / 2) / vh;
+          const fill = box.querySelector('.feature-image-fill');
+          const img = box.querySelector('img');
+          const parallax = progress * -105;
+          const mouseDepth = box === mainImage ? 7 : 4;
+          if (img) {
+            img.style.transform = `translate3d(${smoothX * mouseDepth}px, ${parallax + smoothY * mouseDepth}px, 0) scale(1.045)`;
+          }
+          if (fill) {
+            fill.style.transform = `translate3d(${progress * -24 + smoothX * 4}px, ${progress * -75 + smoothY * 4}px, 0) scale(1.045)`;
+          }
+          if (box === mainImage && arrow) {
+            const p = Math.max(-1, Math.min(1, (r.top + r.height - vh) / Math.max(r.height,1)));
+            arrow.style.transform = `rotate(${-43 + p * 103}deg)`;
+          }
+        });
+        raf = requestAnimationFrame(tick);
+      };
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(tick);
+    })();
+  </script>
+  <script>
+    document.body.classList.remove('is-loading');
+    document.querySelectorAll('.reveal-up').forEach((el,i)=>setTimeout(()=>el.classList.add('visible'),120+i*70));
+  </script>
+</body>
+</html>

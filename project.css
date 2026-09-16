@@ -1,0 +1,71 @@
+/* V87 — Project One case-study page */
+.project-page{background:#f3f1ed;color:#111;overflow-x:hidden}
+.project-page .nav{color:#111;background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none}
+.project-page .nav .brand,.project-page .nav .nav-link,.project-page .nav .menu{color:#111}
+.project-page .nav .nav-link:after,.project-page .nav .brand:after{background:#111}
+.project-page .menu i,.project-page .menu i:after{background:#111}
+.project-page .scroll-nav-trigger{background:#111;color:#fff}
+.project-container{width:min(100% - 13.5vw,1200px);margin:0 auto}
+.project-container-medium{width:min(100% - 24vw,1000px);margin:0 auto}
+.project-hero{min-height:82vh;padding:150px 0 80px;display:flex;align-items:flex-end;background:#f3f1ed}
+.project-kicker{display:flex;justify-content:space-between;gap:30px;margin-bottom:44px;font:500 11px/1 "DM Sans";letter-spacing:.09em;text-transform:uppercase;color:#777}
+.project-title{font:400 clamp(5rem,11vw,11rem)/.82 "Manrope";letter-spacing:-.095em;margin:0;overflow:hidden}
+.project-title span{display:block;transform:translateY(110%);opacity:0;animation:projectTitleIn 1.15s cubic-bezier(.16,1,.3,1) forwards}
+.project-title span:nth-child(2){animation-delay:.08s}
+@keyframes projectTitleIn{to{transform:translateY(0);opacity:1}}
+.project-intro{padding:35px 0 90px;border-top:1px solid #d3d0ca}
+.project-info{display:grid;grid-template-columns:repeat(4,1fr);gap:35px}
+.project-info-block h5,.project-footer-meta h5{font:500 10px/1 "DM Sans";text-transform:uppercase;letter-spacing:.1em;color:#777;margin:0 0 15px}
+.project-info-block .rule{height:1px;background:#d3d0ca;margin-bottom:14px}
+.project-info-block p{font:400 13px/1.45 "DM Sans";margin:0}
+.project-hero-image-section{padding:0 0 150px}
+.project-image-wrap{position:relative;aspect-ratio:1.52;overflow:hidden;background:#ddd}
+.project-image-wrap img{width:100%;height:115%;position:absolute;left:0;top:-7%;object-fit:cover;display:block;transform:scale(1.04);transition:transform .15s linear}
+.project-image-overlay{position:absolute;inset:0;background:#ddd;z-index:2;transform:translateY(0);animation:projectImageReveal 1.25s cubic-bezier(.76,0,.24,1) .35s forwards}
+@keyframes projectImageReveal{to{transform:translateY(-101%)}}
+.project-live{position:absolute;z-index:4;right:5%;top:6%;width:150px;height:150px;border-radius:50%;background:#1b1c20;color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;font:500 13px/1.1 "Manrope";transition:transform .7s cubic-bezier(.16,1,.3,1)}
+.project-live:hover{transform:scale(1.08) rotate(4deg)}
+.project-live small{display:block;font:400 9px "DM Sans";opacity:.6;margin-top:7px}
+.project-section{padding:0 0 160px}
+.project-section.dark{background:#17181b;color:#f4f2ee;padding:150px 0}
+.project-section.light{background:#e5e3df;padding:130px 0}
+.project-copy-grid{display:grid;grid-template-columns:1fr 2fr;gap:8vw;align-items:start}
+.project-label{font:500 11px "DM Sans";text-transform:uppercase;letter-spacing:.08em;color:#777}
+.dark .project-label{color:#aaa}
+.project-copy h2{font:400 clamp(3rem,6.5vw,7rem)/.88 "Manrope";letter-spacing:-.08em;margin:0 0 35px;max-width:850px}
+.project-copy p{font:400 15px/1.6 "DM Sans";color:#555;max-width:580px;margin:0}
+.dark .project-copy p{color:#c2c2c2}
+.project-full-image{width:100%;aspect-ratio:1.65;overflow:hidden;background:#d7d5d1}
+.project-full-image img{width:100%;height:115%;object-fit:cover;display:block;transform:translateY(-7%);transition:transform .12s linear}
+.project-full-image.tall{aspect-ratio:1.12;max-width:1000px;margin:0 auto}
+.project-device{max-width:1050px;margin:0 auto;position:relative}
+.project-device-frame{background:#202124;border-radius:22px;padding:18px;box-shadow:0 35px 90px rgba(0,0,0,.22)}
+.project-device-screen{aspect-ratio:16/10;overflow:hidden;border-radius:10px;background:#ddd}
+.project-device-screen img{width:100%;height:100%;object-fit:cover;display:block}
+.project-device-caption{display:flex;justify-content:space-between;margin-top:18px;font:400 11px "DM Sans";color:#888;text-transform:uppercase;letter-spacing:.08em}
+.project-pair{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:start}
+.project-pair .project-full-image{aspect-ratio:1/1.15}
+.project-next{background:#1b1c20;color:#fff;padding:120px 0 145px;position:relative;overflow:hidden}
+.project-next-link{display:block;color:inherit}
+.project-next-kicker{font:500 11px "DM Sans";text-transform:uppercase;letter-spacing:.09em;color:#999;margin-bottom:30px}
+.project-next h2{font:400 clamp(4rem,9vw,9rem)/.85 "Manrope";letter-spacing:-.09em;margin:0;max-width:900px}
+.project-next-image{width:min(32vw,390px);aspect-ratio:1.05;position:absolute;right:8vw;top:50%;transform:translateY(-50%) rotate(3deg);overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.project-next-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.16,1,.3,1)}
+.project-next-link:hover .project-next-image img{transform:scale(1.06)}
+.project-next-arrow{margin-top:55px;font:400 13px "DM Sans";opacity:.65}
+.project-footer{background:#1b1c20;color:#fff;padding:0 0 28px}
+.project-footer-inner{border-top:1px solid rgba(255,255,255,.18);padding-top:20px;display:flex;justify-content:space-between;gap:30px;font:400 11px/1.4 "DM Sans";color:rgba(255,255,255,.55)}
+.project-footer-inner strong{color:#fff;font-weight:500;display:block}
+.project-footer-inner span{display:block}
+@media(max-width:800px){
+ .project-container,.project-container-medium{width:calc(100% - 44px)}
+ .project-hero{min-height:68vh;padding:120px 0 60px}
+ .project-kicker{margin-bottom:30px}.project-title{font-size:clamp(4rem,15vw,7rem)}
+ .project-intro{padding:28px 0 70px}.project-info{grid-template-columns:1fr 1fr;gap:35px 22px}
+ .project-hero-image-section{padding-bottom:90px}.project-live{width:110px;height:110px;font-size:11px;right:4%;top:4%}
+ .project-section{padding-bottom:100px}.project-section.dark,.project-section.light{padding:90px 0}
+ .project-copy-grid{grid-template-columns:1fr;gap:35px}.project-copy h2{font-size:clamp(2.8rem,12vw,5rem)}
+ .project-full-image{aspect-ratio:1.15}.project-pair{grid-template-columns:1fr;gap:55px}.project-device-frame{padding:9px;border-radius:12px}.project-device-screen{border-radius:6px}
+ .project-next{padding:90px 0 115px}.project-next h2{font-size:clamp(3.5rem,14vw,6rem)}.project-next-image{position:relative;right:auto;top:auto;transform:none;width:72%;margin:60px 0 0 auto}.project-next-arrow{margin-top:35px}
+ .project-footer-inner{flex-direction:column}
+}
